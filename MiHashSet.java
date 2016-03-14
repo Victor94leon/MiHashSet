@@ -93,4 +93,26 @@ public class MiHashSet
         cadena += "'"+valores.get(index);
         return cadena;
     }
+    
+    /**
+     * Método que devuelve verdadero si el parámetro es igual al conjunto sobre el que 
+     * se invoca y falso en otro caso.
+     */
+    public boolean equals(MiHashSet otroConjunto)
+    {
+        boolean conjuntosIguales = true;
+        if (size() == otroConjunto.size()) {
+            int index = 0;           
+            while (index<size() && conjuntosIguales) {
+                if (!otroConjunto.contains(valores.get(index))) {
+                    conjuntosIguales = false;
+                }
+                index++;
+            }
+        }
+        else {
+            conjuntosIguales = false;
+        }       
+        return conjuntosIguales;
+    }
 }
