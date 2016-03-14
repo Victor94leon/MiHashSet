@@ -77,4 +77,20 @@ public class MiHashSet
     {
         return valores.size();
     }
+    
+    /**
+     * Método que devuelve una cadena conteniendo todos los elementos del conjunto 
+     * separados por comas y entre corchetes.
+     */
+    public String toString()
+    {
+        String cadena = new String();
+        int index = 0;
+        while (index<size()-1) {
+            cadena += "'"+valores.get(index)+"',";
+            index++;
+        }
+        cadena += "'"+valores.get(index);
+        return cadena;
+    }
 }
