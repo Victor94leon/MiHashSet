@@ -3,7 +3,7 @@ public class MiHashSet
 {
     // Dato de tipo ArrayListInt para guardar los elementos
     private ArrayListInt valores;
-    
+
     /**
      * Método constructor para objetos de la clase MiHashSet
      */
@@ -11,7 +11,7 @@ public class MiHashSet
     {
         valores = new ArrayListInt();
     }
-    
+
     /**
      * Método que añade un valor al conjunto si no estaba.
      * Devuelve verdadero en caso de que el elemento no estuviera presente en el conjunto y falso en caso contrario.
@@ -27,7 +27,7 @@ public class MiHashSet
         }
         return elementoNoRepetido;
     }
-    
+
     /**
      * Método que vacia el ocnjunto
      */
@@ -35,7 +35,7 @@ public class MiHashSet
     {
         valores.clear();
     }
-    
+
     /**
      * Método que devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
      */
@@ -47,7 +47,7 @@ public class MiHashSet
         }
         return elementoRepetido;
     }
-    
+
     /**
      * Método que devuelve verdadero si el conjunto no contiene elementos.
      */
@@ -55,7 +55,7 @@ public class MiHashSet
     {
         return valores.isEmpty();
     }
-    
+
     /**
      * Método que elimina del conjunto el elemento dado. 
      * Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
@@ -69,7 +69,7 @@ public class MiHashSet
         }
         return elementoEliminado;
     }
-    
+
     /**
      * Método que devuelve el número de elementos del conjunto.
      */
@@ -77,23 +77,26 @@ public class MiHashSet
     {
         return valores.size();
     }
-    
+
     /**
      * Método que devuelve una cadena conteniendo todos los elementos del conjunto 
      * separados por comas y entre corchetes.
      */
     public String toString()
     {
-        String cadena = new String();
-        int index = 0;
-        while (index<size()-1) {
-            cadena += "'"+valores.get(index)+"',";
-            index++;
+        String cadena = "[";
+        if (size()>0) {
+            int index = 0;
+            while (index<size()-1) {
+                cadena += valores.get(index)+", ";
+                index++;
+            }
+            cadena += valores.get(index);
         }
-        cadena += "'"+valores.get(index);
+        cadena += "]";
         return cadena;
     }
-    
+
     /**
      * Método que devuelve verdadero si el parámetro es igual al conjunto sobre el que 
      * se invoca y falso en otro caso.
