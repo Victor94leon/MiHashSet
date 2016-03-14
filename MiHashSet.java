@@ -55,4 +55,18 @@ public class MiHashSet
     {
         return valores.isEmpty();
     }
+    
+    /**
+     * Método que elimina del conjunto el elemento dado. 
+     * Si no existiera devuelve falso; si existía en el conjunto devuelve verdadero.
+     */
+    public boolean remove(int elemento)
+    {
+        boolean elementoEliminado = false;
+        if (contains(elemento)) {
+            valores.remove(valores.indexOf(elemento));
+            elementoEliminado = true;
+        }
+        return elementoEliminado;
+    }
 }
