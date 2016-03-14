@@ -27,4 +27,12 @@ public class MiHashSet
         }
         return elementoNoRepetido;
     }
+    
+    /**
+     * Método que vacia el ocnjunto
+     */
+    public void clear()
+    {
+        valores.clear();
+    }
 }
