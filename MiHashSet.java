@@ -69,4 +69,12 @@ public class MiHashSet
         }
         return elementoEliminado;
     }
+    
+    /**
+     * Método que devuelve el número de elementos del conjunto.
+     */
+    public int size()
+    {
+        return valores.size();
+    }
 }
