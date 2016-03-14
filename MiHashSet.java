@@ -1,33 +1,16 @@
 
-/**
- * Write a description of class MiHashSet here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MiHashSet
 {
-    // instance variables - replace the example below with your own
-    private int x;
-
+    // Dato de tipo ArrayListInt para guardar los elementos
+    private ArrayListInt valores;
+    
     /**
-     * Constructor for objects of class MiHashSet
+     * Método constructor para objetos de la clase MiHashSet
      */
-    public MiHashSet()
+    public MiHashSet() 
     {
-        // initialise instance variables
-        x = 0;
+        valores = new ArrayListInt();
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     * 
-     * @param  y   a sample parameter for a method
-     * @return     the sum of x and y 
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
-    }
+    
+    
 }
