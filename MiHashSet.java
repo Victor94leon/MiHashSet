@@ -47,4 +47,12 @@ public class MiHashSet
         }
         return elementoRepetido;
     }
+    
+    /**
+     * Método que devuelve verdadero si el conjunto no contiene elementos.
+     */
+    public boolean isEmpty()
+    {
+        return valores.isEmpty();
+    }
 }
