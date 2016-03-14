@@ -35,4 +35,16 @@ public class MiHashSet
     {
         valores.clear();
     }
+    
+    /**
+     * Método que devuelve verdadero si el conjunto contiene el elemento, falso en caso contrario.
+     */
+    public boolean contains(int elemento)
+    {
+        boolean elementoRepetido = false;
+        if (valores.contains(elemento)) {
+            elementoRepetido = true;
+        }
+        return elementoRepetido;
+    }
 }
